@@ -68,49 +68,7 @@ function Footer() {
               <div className="col-lg-7 col-md-6">
                 <div className="footer-right-area">
                   <div className="row g-4">
-                    <div className="col-lg-3 col-md-6 col-sm-6 d-flex justify-content-sm-start">
-                      <div className="footer-item text-sm-start">
-                        <h5 className="footer-title">Explore On</h5>
-                        <ul className="footer-link">
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/`}
-                              onClick={scrollTop}
-                            >
-                              Home
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/team`}
-                              onClick={scrollTop}
-                            >
-                              Meet Our Team
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/project`}
-                              onClick={scrollTop}
-                            >
-                              Our Portfolio
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/feedback`}
-                              onClick={scrollTop}
-                            >
-                              Feedback
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="#">Agency Minimal</Link>
-                          </li>
-                          {/* <li><a href="#">List With Sidebar</a></li> */}
-                        </ul>
-                      </div>
-                    </div>
+                  {/* remove Explore On */}
                     <div className="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-sm-start">
                       <div className="footer-item text-sm-start">
                         <h5 className="footer-title">Our Services</h5>
