@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
 import Sponsor from "../../common/Sponsor";
-import JoinUs from "../../common/JoinUs";
+// import JoinUs from "../../common/JoinUs";
 import HomeoneLetestWork from "./HomeoneLetestWork";
 import HomeoneService from "./HomeoneService";
 // import TestimonialOne from "./TestimonialOne";
@@ -21,7 +21,7 @@ function HomePage() {
       {/* <TeamArea /> */}
       <BlogArea />
       {/* <TestimonialOne /> */}
-      <JoinUs padding="pt-120" />
+      {/* <JoinUs padding="pt-120" /> */}
       <Sponsor />
     </>
   );
