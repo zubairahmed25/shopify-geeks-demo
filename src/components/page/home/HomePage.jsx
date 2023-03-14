@@ -17,12 +17,12 @@ function HomePage() {
       <HomeoneService />
       <HomeoneLetestWork />
       <AboutArea />
+      <Sponsor />
       <AchivmentArea />
       {/* <TeamArea /> */}
       <BlogArea />
       {/* <TestimonialOne /> */}
       {/* <JoinUs padding="pt-120" /> */}
-      <Sponsor />
     </>
   );
 }

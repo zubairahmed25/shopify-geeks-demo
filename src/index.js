@@ -38,8 +38,7 @@ function Root() {
         <Switch>
           {/*main layout*/}
           <Route exact path="/" component={MainLayout} />
-          {/* secound layout */}
-          <Route exact path="/index2" component={HomePageTwoLayout} />
+        
           {/* all inner page load layout component */}
           <Layout>
             <Route
@@ -52,21 +51,21 @@ function Root() {
               path={`${process.env.PUBLIC_URL}/contact-us`}
               component={ContaceUsPage}
             />
-            <Route
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/team`}
               component={TeamPage}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/feedback`}
               component={FeedbackPage}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/faq`}
               component={FaqPage}
-            />
+            /> */}
             <Route
               exact
               path={`${process.env.PUBLIC_URL}/error`}

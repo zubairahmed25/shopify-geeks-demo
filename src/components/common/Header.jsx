@@ -202,7 +202,7 @@ function Header() {
                 <Link to={"#"} className="mobile-menu-button eg-btn">
                   Start Project
                 </Link>
-                <ul className="header-social">
+                {/* <ul className="header-social">
                   <li>
                     <a rel="noopener noreferrer" href="https://www.facebook.com/" target="_blank">FB</a>
                   </li>
@@ -215,7 +215,7 @@ function Header() {
                   <li>
                     <a rel="noopener noreferrer" href="https://www.pinterest.com/" target="_blank">PR</a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
             <div className="nav-right-area">
@@ -226,7 +226,7 @@ function Header() {
               >
                 <span>Start Project</span>
               </Link>
-              <ul className="header-social">
+              {/* <ul className="header-social">
                 <li>
                   <Link to={"#"}>FB</Link>
                 </li>
@@ -239,7 +239,7 @@ function Header() {
                 <li>
                   <Link to={"#"}>PR</Link>
                 </li>
-              </ul>
+              </ul> */}
               {/* icons remove */}
             </div>
           </div>
