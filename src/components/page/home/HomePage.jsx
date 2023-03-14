@@ -18,7 +18,7 @@ function HomePage() {
       <HomeoneLetestWork />
       <AboutArea />
       <AchivmentArea />
-      <TeamArea />
+      {/* <TeamArea /> */}
       <BlogArea />
       <TestimonialOne />
       <JoinUs padding="pt-120" />
