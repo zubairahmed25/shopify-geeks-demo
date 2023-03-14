@@ -4,9 +4,9 @@ import Sponsor from "../../common/Sponsor";
 import JoinUs from "../../common/JoinUs";
 import HomeoneLetestWork from "./HomeoneLetestWork";
 import HomeoneService from "./HomeoneService";
-import TestimonialOne from "./TestimonialOne";
+// import TestimonialOne from "./TestimonialOne";
 import BlogArea from "./BlogArea";
-import TeamArea from "./TeamArea";
+// import TeamArea from "./TeamArea";
 import AchivmentArea from "../../common/AchivementArea";
 import AboutArea from "./AboutArea";
 
@@ -20,7 +20,7 @@ function HomePage() {
       <AchivmentArea />
       {/* <TeamArea /> */}
       <BlogArea />
-      <TestimonialOne />
+      {/* <TestimonialOne /> */}
       <JoinUs padding="pt-120" />
       <Sponsor />
     </>
