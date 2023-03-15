@@ -113,7 +113,7 @@ function Banner() {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="swiper-slide position-relative">
+            {/* <SwiperSlide className="swiper-slide position-relative">
               <div className="container-fluid">
                 <div className="row align-items-center">
                   <div className="col-lg-5 col-md-7 d-md-block d-none py-2">
@@ -176,7 +176,7 @@ function Banner() {
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </div>
           <div className="slider-arrows banner1-arrow text-center d-flex justify-content-start">
             <div
