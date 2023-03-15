@@ -6,7 +6,7 @@ function AchivementArea() {
     const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <div className="achievment-section pt-120">
+      <div className="achievment-section pb-120">
         <div className="container position-relative">
           <img src={process.env.PUBLIC_URL + "/images/icon/dotted.svg"} className="dotted-circle" alt="images" />
           <div className="achievment-section-wrapper bg--primary">
