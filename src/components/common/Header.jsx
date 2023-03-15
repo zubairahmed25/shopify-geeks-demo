@@ -1,34 +1,34 @@
-import React, { useEffect, useReducer, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link,  } from "react-router-dom";
 import WOW from 'wowjs';
 import { SRLWrapper } from "simple-react-lightbox";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import AnimatedCursor from "react-animated-cursor";
 
 
 /*---------Using reducer mange the active or inactive menu----------*/
-const initialState = {activeMenu:''};
+// const initialState = {activeMenu:''};
 
-function reducer(state, action) {
-  switch (action.type) {
-    case 'homeOne':
-      return {activeMenu: 'homeOne'};
-    case 'service':
-      return {activeMenu: 'service'};
-    case 'projects':
-      return {activeMenu: 'projects'};
-    case 'pages':
-      return {activeMenu: 'pages'};
-    case 'blogs':
-      return {activeMenu: 'blogs'};
-    default:
-      return {activeMenu: ''};
-  }
-}
+// function reducer(state, action) {
+//   switch (action.type) {
+//     case 'homeOne':
+//       return {activeMenu: 'homeOne'};
+//     case 'service':
+//       return {activeMenu: 'service'};
+//     case 'projects':
+//       return {activeMenu: 'projects'};
+//     case 'pages':
+//       return {activeMenu: 'pages'};
+//     case 'blogs':
+//       return {activeMenu: 'blogs'};
+//     default:
+//       return {activeMenu: ''};
+//   }
+// }
 
 function Header() { 
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const currentRoute = useLocation().pathname
+  // const [state, dispatch] = useReducer(reducer, initialState);
+  // const currentRoute = useLocation().pathname
   
    // Sticky Navbar
     useEffect(() => {
