@@ -35,18 +35,18 @@ function Header() {
       new WOW.WOW({
         live:false
       }).init();
-      window.addEventListener("scroll", isSticky);
+      // window.addEventListener("scroll", isSticky);
       return () => {
-        window.removeEventListener("scroll", isSticky);
+        // window.removeEventListener("scroll", isSticky);
       };
     });
-    const isSticky = (e) => {
-      const header = document.querySelector(".header-section");
-      const menuscrollTop = window.scrollY;
-      menuscrollTop >= 20
-        ? header.classList.add("sticky")
-        : header.classList.remove("sticky");
-    };
+    // const isSticky = (e) => {
+    //   const header = document.querySelector(".header-section");
+    //   const menuscrollTop = window.scrollY;
+    //   menuscrollTop >= 20
+    //     ? header.classList.add("sticky")
+    //     : header.classList.remove("sticky");
+    // };
 
      /*----for single sidebar event use one state-------*/
   const [sidebar, setSidebar] = useState(false);
@@ -113,7 +113,7 @@ function Header() {
               <i className="bx bx-x" />
             </div>
             <div className="sidebar-logo">
-              <Link onClick={scrollTop} to={"/"}><img src={process.env.PUBLIC_URL + "/images/icon/logo.png"} alt="images" /></Link>
+              <Link onClick={scrollTop} to={"/"}><img src={process.env.PUBLIC_URL + "/images/icon/logos.svg"} alt="images" style={{width:"150px"}} /></Link>
             </div>
             <p>We’re west coast change-makers, in a complex world. The brands we support are positioned to be
               purposeful and powerful while also fluid.</p>
@@ -176,21 +176,21 @@ function Header() {
       </div>
    
   
-      <header className="header-section">
+      <header className="header-section sticky">
         <div className="container-fluid">
           <div className="header-area">
             <div className="header-logo">
               <Link onClick={scrollTop} to={"#"}>
-                <img src={process.env.PUBLIC_URL + "/images/icon/logo.png"} alt="images" />
+                <img src={process.env.PUBLIC_URL + "/images/icon/logos.svg"} alt="images" style={{width:"150px"}} />
               </Link>
             </div>
-            <div  className="mobile-menu-btn text-white d-lg-none d-block">
+            <div  className="mobile-menu-btn text-white d-none">
               <i onClick={showSidebar} className="bi bi-list" />
             </div>
             <div className= {sidebar === 1 ? "main-menu show-menu" : "main-menu"} >
-              <div className="mobile-logo-area d-lg-none d-block">
+              <div className="mobile-logo-area d-none">
                 <div className="mobile-logo-wrap d-flex justify-content-between align-items-center">
-                  <img src={process.env.PUBLIC_URL + "/images/icon/logo.png"} alt="images" />
+                  <img src={process.env.PUBLIC_URL + "/images/icon/logos.svg"} alt="images" style={{width:"150px"}} />
                   <div className="menu-close-btn" onClick={showSidebar}>
                     <i className="bi bi-x-lg" />
                   </div>
@@ -198,7 +198,7 @@ function Header() {
               </div>
               {/* nav-bar remove */}
               {/* mobile-search-area */}
-              <div className="mobile-menu-bottom d-lg-none d-block">
+              <div className="mobile-menu-bottom d-none ">
                 <Link to={"#"} className="mobile-menu-button eg-btn">
                   Start Project
                 </Link>

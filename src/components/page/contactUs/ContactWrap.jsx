@@ -109,7 +109,7 @@ function ContactWrap() {
               </form>
             </div>
           </div>
-          <div className="row pt-120 g-4 d-flex justify-content-center">
+          {/* <div className="row pt-120 g-4 d-flex justify-content-center">
             <div className="col-lg-4 col-md-6 col-sm-8">
               <div className="eg-card contact-signle hover-btn">
                 <span></span>
@@ -157,7 +157,7 @@ function ContactWrap() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         
         </div>
       </div>
