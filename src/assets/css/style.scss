@@ -1390,7 +1390,7 @@ header {
 }
 .nav-right-area{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 
     @include lg-down-device(){

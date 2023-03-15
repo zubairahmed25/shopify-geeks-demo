@@ -8,9 +8,9 @@ import SimpleReactLightbox from "simple-react-lightbox";
 // import all css
 import "./index.css";
 import ContaceUsPage from "./components/page/contactUs/ContaceUsPage";
-import TeamPage from "./components/page/team/TeamPage";
-import FeedbackPage from "./components/page/feedback/FeedbackPage";
-import FaqPage from "./components/page/faq/FaqPage";
+// import TeamPage from "./components/page/team/TeamPage";
+// import FeedbackPage from "./components/page/feedback/FeedbackPage";
+// import FaqPage from "./components/page/faq/FaqPage";
 import ErrorPage from "./components/page/error/ErrorPage";
 import BlogGridPage from "./components/page/blogGrid/BlogGridPage";
 import BlogSidebarPage from "./components/page/blogSidebar/BlogSidebarPage";
@@ -20,7 +20,7 @@ import ProjectDetailsPage from "./components/page/ProjectDetails/ProjectDetailsP
 import ServicePage from "./components/page/service/ServicePage";
 import ServiceDetailsPage from "./components/page/serviceDetails/ServiceDetailsPage";
 import AboutPage from "./components/page/about/AboutPage";
-import HomePageTwoLayout from "./components/layout/HomePageTwoLayout";
+// import HomePageTwoLayout from "./components/layout/HomePageTwoLayout";
 
 /*
  * Version :Tourx-pro 0.1
