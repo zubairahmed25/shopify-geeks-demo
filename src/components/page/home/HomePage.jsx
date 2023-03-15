@@ -20,7 +20,7 @@ function HomePage() {
       <Sponsor />
       <AchivmentArea />
       {/* <TeamArea /> */}
-      <BlogArea />
+      {/* <BlogArea /> */}
       {/* <TestimonialOne /> */}
       {/* <JoinUs padding="pt-120" /> */}
     </>
