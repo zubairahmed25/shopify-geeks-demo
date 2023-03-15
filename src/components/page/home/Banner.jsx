@@ -213,7 +213,11 @@ function Banner() {
             </div>
           </div>
         </Swiper>
+        <div className="circle-border" style={{position:"absolute",top:"600px",right:"200px"}}>
+                      <div className="moving-circle"></div>
+                    </div>
       </div>
+      
     </>
   );
 }
