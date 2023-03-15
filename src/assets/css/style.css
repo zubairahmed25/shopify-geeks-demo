@@ -1185,26 +1185,13 @@ header .header-logo {
   justify-content: end;
   align-items: center;
 }
-@media (max-width: 991px) {
-  .nav-right-area {
-    display: none;
-    visibility: hidden;
-  }
-}
 .nav-right-area .header-button {
   padding: 7px 13px;
   border: 1px solid #626262;
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  margin-right: 50px;
   white-space: nowrap;
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .nav-right-area .header-button {
-    display: none;
-    visibility: hidden;
-  }
 }
 .nav-right-area .header-social {
   margin: 0;
@@ -1285,6 +1272,7 @@ header .header-logo {
   padding-bottom: 115px;
   padding-left: 6%;
   overflow-x: hidden;
+  overflow-y: clip;
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .banner-section {

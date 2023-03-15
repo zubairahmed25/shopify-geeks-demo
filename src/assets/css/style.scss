@@ -1394,8 +1394,8 @@ header {
     align-items: center;
 
     @include lg-down-device(){
-        display: none;
-        visibility: hidden;
+        // display: none;
+        // visibility: hidden;
     } 
 
     .header-button{
@@ -1404,12 +1404,12 @@ header {
         font-size: 1rem;
         font-weight: 600;
         color: #fff;
-        margin-right: 50px;
+        // margin-right: 50px;
         white-space: nowrap;
 
         @include lg-device(){
-            display: none;
-            visibility: hidden;
+            // display: none;
+            // visibility: hidden;
         }
     }
     
@@ -1495,6 +1495,7 @@ header {
     padding-bottom: 115px;
     padding-left: 6%;
     overflow-x: hidden;
+    overflow-y: clip;
     @include xl-device() {
         padding-top: 160px;
         padding-bottom: 85px;
