@@ -13,9 +13,10 @@ function Footer() {
                 <div className="footer-left-address">
                   <Link to={`${process.env.PUBLIC_URL}/`} onClick={scrollTop}>
                     <img
-                      src={process.env.PUBLIC_URL + "/images/icon/logo.png"}
+                      src={process.env.PUBLIC_URL + "/images/icon/logos.svg"}
                       className="footer-logo"
                       alt="images"
+                      style={{width:"150px"}}
                     />
                   </Link>
                   <ul className="address-list">
