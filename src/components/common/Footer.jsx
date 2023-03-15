@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { SRLWrapper } from "simple-react-lightbox";
+// import { SRLWrapper } from "simple-react-lightbox";
 function Footer() {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
@@ -68,49 +68,7 @@ function Footer() {
               <div className="col-lg-7 col-md-6">
                 <div className="footer-right-area">
                   <div className="row g-4">
-                    <div className="col-lg-3 col-md-6 col-sm-6 d-flex justify-content-sm-start">
-                      <div className="footer-item text-sm-start">
-                        <h5 className="footer-title">Explore On</h5>
-                        <ul className="footer-link">
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/`}
-                              onClick={scrollTop}
-                            >
-                              Home
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/team`}
-                              onClick={scrollTop}
-                            >
-                              Meet Our Team
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/project`}
-                              onClick={scrollTop}
-                            >
-                              Our Portfolio
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/feedback`}
-                              onClick={scrollTop}
-                            >
-                              Feedback
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="#">Agency Minimal</Link>
-                          </li>
-                          {/* <li><a href="#">List With Sidebar</a></li> */}
-                        </ul>
-                      </div>
-                    </div>
+                  {/* remove Explore On */}
                     <div className="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-sm-start">
                       <div className="footer-item text-sm-start">
                         <h5 className="footer-title">Our Services</h5>
@@ -159,115 +117,7 @@ function Footer() {
                       </div>
                     </div>
                     <div className="col-lg-5 col-md-12 d-flex justify-content-sm-start">
-                      <div className="footer-item text-sm-start">
-                        <h5 className="footer-title">Instagram Post</h5>
-                        <SRLWrapper>
-                          <ul className="gallery-list d-flex justify-content-sm-start flex-wrap gap-2">
-                            <li>
-                              <a
-                                href={
-                                  process.env.PUBLIC_URL +
-                                  "/images/bg/fimg-big2.png"
-                                }
-                                className="image-open"
-                              >
-                                <img
-                                  src={
-                                    process.env.PUBLIC_URL +
-                                    "/images/bg/fimg-big2.png"
-                                  }
-                                  alt="images"
-                                />
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href={
-                                  process.env.PUBLIC_URL +
-                                  "/images/bg/fimg-big1.png"
-                                }
-                                className="image-open"
-                              >
-                                <img
-                                  src={
-                                    process.env.PUBLIC_URL +
-                                    "/images/bg/fimg-big1.png"
-                                  }
-                                  alt="images"
-                                />
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href={
-                                  process.env.PUBLIC_URL +
-                                  "/images/bg/fimg-big3.png"
-                                }
-                                className="image-open"
-                              >
-                                <img
-                                  src={
-                                    process.env.PUBLIC_URL +
-                                    "/images/bg/fimg-big3.png"
-                                  }
-                                  alt="images"
-                                />
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href={
-                                  process.env.PUBLIC_URL +
-                                  "/images/bg/fimg-big4.png"
-                                }
-                                className="image-open"
-                              >
-                                <img
-                                  src={
-                                    process.env.PUBLIC_URL +
-                                    "/images/bg/fimg-big4.png"
-                                  }
-                                  alt="images"
-                                />
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href={
-                                  process.env.PUBLIC_URL +
-                                  "/images/bg/fimg-big5.png"
-                                }
-                                className="image-open"
-                              >
-                                <img
-                                  src={
-                                    process.env.PUBLIC_URL +
-                                    "/images/bg/fimg-big5.png"
-                                  }
-                                  alt="images"
-                                />
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href={
-                                  process.env.PUBLIC_URL +
-                                  "/images/bg/fimg-big6.png"
-                                }
-                                className="image-open"
-                              >
-                                <img
-                                  src={
-                                    process.env.PUBLIC_URL +
-                                    "/images/bg/fimg-big6.png"
-                                  }
-                                  alt="images"
-                                />
-                              </a>
-                            </li>
-                          </ul>
-                        </SRLWrapper>
-                      </div>
+                      {/* remove instagram posts */}
                     </div>
                   </div>
                   <div className="row">

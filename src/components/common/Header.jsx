@@ -196,123 +196,13 @@ function Header() {
                   </div>
                 </div>
               </div>
-              <ul  className="menu-list">
-                <li className={currentRoute === "/"?"menu-item active":"menu-item"}  onClick={() => dispatch({type: 'homeOne'})} >
-                  <Link  to={"#"} className="menu-link drop-down" >
-                    Home
-                    <i className="bx bx-chevron-down dropdown-icon" />
-                  </Link>
-                  <ul className={
-                        state.activeMenu ==='homeOne'
-                          ? "submenu d-block"
-                          : "submenu d-xl-block d-none"
-                      }>
-                    <li className={currentRoute === "/"?"sub-item active":"sub-item"}>
-                      <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/`}>Home 1</Link>
-                    </li>
-                    <li className={currentRoute === "/index2"?"sub-item active":"sub-item"}>
-                      <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/index2`}>home 2</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={currentRoute === "/about-us"?"menu-item active":"menu-item"}>
-                  <Link  onClick={scrollTop} to={`${process.env.PUBLIC_URL}/about-us`} className="menu-link">
-                    ABOUT US
-                  </Link>
-                </li>
-                <li className={ currentRoute === "/project" || currentRoute === "/project-details"? "menu-item active":"menu-item"}>
-                  <Link to={"#"} className="menu-link drop-down" onClick={() => dispatch({type: 'projects'})}>
-                    project
-                    <i className="bx bx-chevron-down dropdown-icon" />
-                  </Link>
-                  <ul className={
-                        state.activeMenu ==='projects'
-                          ? "submenu d-block"
-                          : "submenu d-xl-block d-none"
-                      }>
-                    <li className={currentRoute === "/project"?"sub-item active":"sub-item"}>
-                      <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/project` } className={currentRoute === "/project"?"active":"disable"}>projects</Link>
-                    </li>
-                    <li className={currentRoute === "/project-details"?"sub-item active":"sub-item"}>
-                      <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/project-details`}>projects Details</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={ currentRoute === "/service" || currentRoute === "/service-details"? "menu-item active":"menu-item"}  onClick={() => dispatch({type: 'service'})}>
-                  <Link to={"#"} className="menu-link drop-down">
-                    services
-                    <i className="bx bx-chevron-down dropdown-icon" />
-                  </Link>
-                  <ul className={
-                        state.activeMenu ==='service'
-                          ? "submenu d-block"
-                          : "submenu d-xl-block d-none"
-                      }>
-                    <li className={currentRoute === "/service"?"sub-item active":"sub-item"}>
-                      <Link to={`${process.env.PUBLIC_URL}/service`} onClick={scrollTop}>services</Link>
-                    </li>
-                    <li className={currentRoute === "/service-details"?"sub-item active":"sub-item"}>
-                      <Link to={`${process.env.PUBLIC_URL}/service-details`} onClick={scrollTop}>services Details</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={currentRoute === "/blog-details"|| currentRoute === "/blog-sidebar" || currentRoute === "/blog-grid"? "menu-item active":"menu-item"} onClick={() => dispatch({type: 'blogs'})}>
-                  <Link to={"#"}  className="menu-link drop-down">
-                    blog
-                    <i className="bx bx-chevron-down dropdown-icon" />
-                  </Link>
-                  <ul className={
-                        state.activeMenu ==='blogs'
-                          ? "submenu d-block"
-                          : "submenu d-xl-block d-none"
-                      }>
-                    <li className={currentRoute === "/blog-grid"?"sub-item active":"sub-item"}>
-                      <NavLink onClick={scrollTop} to={`${process.env.PUBLIC_URL}/blog-grid`}>blog grid</NavLink>
-                    </li>
-                    <li className={currentRoute === "/blog-sidebar"?"sub-item active":"sub-item"}>
-                      <NavLink onClick={scrollTop} to={`${process.env.PUBLIC_URL}/blog-sidebar`}>Blog sidebar</NavLink>
-                    </li>
-                    <li className={currentRoute === "/blog-details"?"sub-item active":"sub-item"}>
-                      <NavLink onClick={scrollTop} to={`${process.env.PUBLIC_URL}/blog-details`}>Blog details</NavLink>
-                    </li>
-                  </ul>
-                </li>
-                <li className={currentRoute === "/team"|| currentRoute === "/feedback" || currentRoute === "/error" ? "menu-item active":"menu-item"} onClick={() => dispatch({type: 'pages'})}>
-                  <Link to={"#"} className="menu-link drop-down">
-                    Pages
-                    <i className="bx bx-chevron-down dropdown-icon" />
-                  </Link>
-                  <ul className={
-                        state.activeMenu ==='pages'
-                          ? "submenu d-block"
-                          : "submenu d-xl-block d-none"
-                      }>
-                    <li className={currentRoute === "/team"?"sub-item active":"sub-item"}>
-                      <NavLink onClick={scrollTop} to={`${process.env.PUBLIC_URL}/team`}>team</NavLink>
-                    </li>
-                    <li className={currentRoute === "/feedback"?"sub-item active":"sub-item"}>
-                      <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/feedback`}>feedback</Link>
-                    </li>
-                    <li className={currentRoute === "/faq"?"sub-item active":"sub-item"}>
-                      <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/faq`} >faq</Link>
-                    </li>
-                    <li className={currentRoute === "/error"?"sub-item active":"sub-item"}>
-                      <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/error`}>Error-404</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={currentRoute === "/contact-us"?"menu-item active":"menu-item"}>
-                  <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/contact-us`} className="menu-link">
-                    CONTACT
-                  </Link>
-                </li>
-              </ul>
+              {/* nav-bar remove */}
               {/* mobile-search-area */}
               <div className="mobile-menu-bottom d-lg-none d-block">
                 <Link to={"#"} className="mobile-menu-button eg-btn">
                   Start Project
                 </Link>
-                <ul className="header-social">
+                {/* <ul className="header-social">
                   <li>
                     <a rel="noopener noreferrer" href="https://www.facebook.com/" target="_blank">FB</a>
                   </li>
@@ -325,7 +215,7 @@ function Header() {
                   <li>
                     <a rel="noopener noreferrer" href="https://www.pinterest.com/" target="_blank">PR</a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
             <div className="nav-right-area">
@@ -336,7 +226,7 @@ function Header() {
               >
                 <span>Start Project</span>
               </Link>
-              <ul className="header-social">
+              {/* <ul className="header-social">
                 <li>
                   <Link to={"#"}>FB</Link>
                 </li>
@@ -349,13 +239,8 @@ function Header() {
                 <li>
                   <Link to={"#"}>PR</Link>
                 </li>
-              </ul>
-              <div onClick={handleSearchbar} className="search-icon-header search-btn">
-                <i className="bx bx-search-alt-2" />
-              </div>
-              <div onClick={showSidebarleft} className="sidebar-header menu-sidebar-btn">
-                <i className="bx bx-menu-alt-left" />
-              </div>
+              </ul> */}
+              {/* icons remove */}
             </div>
           </div>
         </div>

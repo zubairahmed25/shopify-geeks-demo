@@ -50,6 +50,17 @@ function Sponsor() {
     <>
      <div className="sponsor-section">
         <div className="container">
+        <div className="row d-flex justify-content-lg-end justify-content-center">
+            <div
+              className="col-md-8 text-center wow animate fadeInDown"
+              data-wow-duration="1.5s"
+              data-wow-delay="0.5s"
+            >
+              <div className="section-title pt-0">
+                <h2>Our Partners</h2>
+              </div>
+            </div>
+          </div>
           <div className="row">
             <Swiper {...sponsorSlide} className="swiper sponsor-slider-dark">
               <div className="swiper-wrapper">

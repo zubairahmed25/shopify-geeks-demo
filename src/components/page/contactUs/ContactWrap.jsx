@@ -7,56 +7,7 @@ function ContactWrap() {
     <>
       <div className="contact-section pt-120 pb-120">
         <div className="container">
-          <div className="row pb-120 g-4 d-flex justify-content-center">
-            <div className="col-lg-4 col-md-6 col-sm-8">
-              <div className="eg-card contact-signle hover-btn">
-                <span></span>
-                <div className="icon">
-                  <i className="bi bi-geo-alt"></i>
-                </div>
-                <div className="text">
-                  <h3>Location</h3>
-                  <h4>168/170, Ave 01,Old York Drive</h4>
-                  <h5>Dhaka, Bangladesh</h5>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-8">
-              <div className="eg-card contact-signle hover-btn">
-                <span></span>
-                <div className="icon">
-                  <i className="bx bx-phone-call"></i>
-                </div>
-                <div className="text">
-                  <h3>Phone</h3>
-                  <a href="tel:+880171-770000">
-                    <h4>+880171-770000</h4>
-                  </a>
-                  <a href="tel:+8801761111456">
-                    <h5>+8801761111456</h5>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-8">
-              <div className="eg-card contact-signle hover-btn">
-                <span></span>
-                <div className="icon">
-                  <i className="bx bx-envelope"></i>
-                </div>
-                <div className="text">
-                  <h3>Email</h3>
-                  <a href="mailto:support@example.com">
-                    <h4>support@example.com</h4>
-                  </a>
-                  <a href="mailto:info@example.com">
-                    <h5>info@example.com</h5>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row d-flex justify-content-lg-end justify-content-center">
+        <div className="row d-flex justify-content-lg-end justify-content-center">
             <div className="col-md-8 text-center">
               <div
                 className="section-title wow animate fadeInDown"
@@ -66,7 +17,7 @@ function ContactWrap() {
                 <h2>Get In Touch.</h2>
               </div>
             </div>
-          </div>
+          </div>  
           <div className="row d-flex justify-content-center">
             <div className="col-lg-4 col-md-8 col-sm-8">
               <div
@@ -158,6 +109,56 @@ function ContactWrap() {
               </form>
             </div>
           </div>
+          <div className="row pt-120 g-4 d-flex justify-content-center">
+            <div className="col-lg-4 col-md-6 col-sm-8">
+              <div className="eg-card contact-signle hover-btn">
+                <span></span>
+                <div className="icon">
+                  <i className="bi bi-geo-alt"></i>
+                </div>
+                <div className="text">
+                  <h3>Location</h3>
+                  <h4>168/170, Ave 01,Old York Drive</h4>
+                  <h5>Dhaka, Bangladesh</h5>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-8">
+              <div className="eg-card contact-signle hover-btn">
+                <span></span>
+                <div className="icon">
+                  <i className="bx bx-phone-call"></i>
+                </div>
+                <div className="text">
+                  <h3>Phone</h3>
+                  <a href="tel:+880171-770000">
+                    <h4>+880171-770000</h4>
+                  </a>
+                  <a href="tel:+8801761111456">
+                    <h5>+8801761111456</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-8">
+              <div className="eg-card contact-signle hover-btn">
+                <span></span>
+                <div className="icon">
+                  <i className="bx bx-envelope"></i>
+                </div>
+                <div className="text">
+                  <h3>Email</h3>
+                  <a href="mailto:support@example.com">
+                    <h4>support@example.com</h4>
+                  </a>
+                  <a href="mailto:info@example.com">
+                    <h5>info@example.com</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
         </div>
       </div>
     </>
