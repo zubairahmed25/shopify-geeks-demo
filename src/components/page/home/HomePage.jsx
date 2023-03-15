@@ -8,7 +8,7 @@ import HomeoneService from "./HomeoneService";
 // import BlogArea from "./BlogArea";
 // import TeamArea from "./TeamArea";
 import AchivmentArea from "../../common/AchivementArea";
-import AboutArea from "./AboutArea";
+// import AboutArea from "./AboutArea";
 
 function HomePage() {
   return (
@@ -16,7 +16,7 @@ function HomePage() {
       <Banner />
       <HomeoneService />
       {/* <HomeoneLetestWork /> */}
-      <AboutArea />
+      {/* <AboutArea /> */}
       <Sponsor />
       <AchivmentArea />
       {/* <TeamArea /> */}
