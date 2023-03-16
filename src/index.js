@@ -112,7 +112,6 @@ function Root() {
     </>
   );
 }
-
 ReactDOM.render(
   <React.StrictMode>
     <SimpleReactLightbox>
