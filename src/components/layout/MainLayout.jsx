@@ -10,9 +10,8 @@ function MainLayout() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 30000);
+    }, 3000);
   }, []);
-
   return (
     <>
       {loading ? (

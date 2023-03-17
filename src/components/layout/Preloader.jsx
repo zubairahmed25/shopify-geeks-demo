@@ -1,6 +1,5 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
-
 function Preloader() {
   useEffect(()=>{
 const tl=gsap.timeline({repeat:5})
@@ -21,7 +20,6 @@ tl.set('.barOne',{opacity:0})
       viewBox="0 0 559.12 552.23"
     >
       <defs>
-   
       </defs>
       <path
       className="barTwo"
@@ -44,5 +42,4 @@ tl.set('.barOne',{opacity:0})
     </>
   );
 }
-
 export default Preloader;
