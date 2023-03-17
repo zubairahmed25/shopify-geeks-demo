@@ -79,5 +79,4 @@ function AchivementArea() {
     </>
   )
 }
-
 export default AchivementArea
