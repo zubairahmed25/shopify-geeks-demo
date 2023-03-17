@@ -23,18 +23,18 @@ tl.set('.barOne',{opacity:0})
       </defs>
       <path
       className="barTwo"
-      fill="#fff"
+      fill="#a4de02"
       d="M993.72,1060.28h-66.2l131.24-228.11h-85.9L798.78,1134.74H973.61l-92,141.37h88.82L1047,1158.48a63.55,63.55,0,0,0-53.27-98.2Z"
       transform="translate(-720.44 -723.89)"
       />
       <polygon
       className="barThree"
-      fill="#fff"
+      fill="#a4de02"
       points="559.12 0 475.32 0 353.54 232.62 353.6 232.62 322.32 292.36 406.11 292.36 527.89 59.74 527.84 59.74 559.12 0"
       />
       <polygon
       className="barOne"
-      fill="#fff"
+      fill="#a4de02"
         points="50.15 203.5 0 291.14 85.78 291.14 135.93 203.5 50.15 203.5"
       />
     </svg>
