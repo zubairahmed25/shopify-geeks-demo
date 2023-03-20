@@ -74,9 +74,11 @@ function Header() {
       setSidebarleft(false);
     }
   };
-
   return (
     <>
+    {
+      window.innerWidth>=768&&
+      <div className="d-none d-md-block">
     <AnimatedCursor
         className="coursor"
         innerSize={8}
@@ -106,6 +108,9 @@ function Header() {
           ".SRLControls",
         ]}
       />
+      </div>
+    }
+
       <div className={sidebarleft  ===1 ? "menu-toggle-btn-full-shape show-sidebar" : "menu-toggle-btn-full-shape"}>
         <div className="menu-toggle-wrap bg-white">
           <div className="sidebar-top-area">
