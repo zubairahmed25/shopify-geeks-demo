@@ -1,7 +1,55 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 function ContactWrap() {
+  const [userData, setUserData] = useState({
+    name:"",
+    email:"",
+    phone:"",
+    subject:"",
+    message:"",
+  });
+  let name,value;
+  const postUserData=(event)=>{
+    name = event.target.name;
+    value=event.target.value;
+    setUserData({...userData,[name]:value})
+  };
+  const submitData = async (event)=>{
+    event.preventDefault();
+    const {name,email,phone,subject,message}=userData;
+    if(name && email && phone && subject && message){
+    const res = fetch("https://shopify-geeks-default-rtdb.firebaseio.com/userDataRecords.json",
+    {
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        subject,
+        message
+      }),
+    }
+    );
+    if (res) {
+      setUserData({
+        name:"",
+        email:"",
+        phone:"",
+        subject:"",
+        message:"",
+      });
+      alert("Data stored");
+    }else{
+      alert("plz fill the data")
+    }
+  }else{
+    alert("plz fill the data")
+    }
+  };
   const scrolltop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <>
@@ -52,10 +100,16 @@ function ContactWrap() {
                 onSubmit={(e) => e.preventDefault()}
                 className="contact-form"
               >
-                <div className="row">
+                <div className="row" method="POST">
                   <div className="col-md-6">
                     <div className="form-inner">
-                      <input type="text" required placeHolder="Your Name :" />
+                      <input 
+                        type="text" 
+                        required 
+                        placeHolder="Your Name :" 
+                        name="name"
+                        value={userData.name}
+                        onChange={postUserData}/>
                     </div>
                   </div>
                   <div className="col-md-6">
@@ -64,6 +118,9 @@ function ContactWrap() {
                         type="text"
                         required
                         placeHolder="Enter Your Email :"
+                        name="email"
+                        value={userData.email}
+                        onChange={postUserData}
                       />
                     </div>
                   </div>
@@ -73,23 +130,37 @@ function ContactWrap() {
                         type="text"
                         required
                         placeHolder="Phone Number :"
+                        name="phone"
+                        value={userData.phone}
+                        onChange={postUserData}
                       />
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-inner">
-                      <input type="text" required placeHolder="Subject :" />
+                      <input 
+                        type="text" 
+                        required 
+                        placeHolder="Subject :" 
+                        name="subject"
+                        value={userData.subject}
+                        onChange={postUserData}/>
                     </div>
                   </div>
                   <div className="col-md-12">
                     <div className="form-inner">
-                      <textarea placeHolder="Enter Your Message"></textarea>
+                      <textarea 
+                        placeHolder="Enter Your Message"
+                        name="message"
+                        value={userData.message}
+                        onChange={postUserData}></textarea>
                     </div>
                   </div>
                   <div className="col-md-12">
                     <button
                       type="submit"
                       class="eg-btn hover-btn comment-form-btn"
+                      onClick={submitData}
                     >
                       <span>
                         Send Now
