@@ -1,54 +1,27 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-
+import { db } from "../../../config/main";
+import { addDoc, collection } from "firebase/firestore";
+import Swal from "sweetalert2";
 function ContactWrap() {
-  const [userData, setUserData] = useState({
-    name:"",
-    email:"",
-    phone:"",
-    subject:"",
-    message:"",
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    phone: "",
+    subj:"",
   });
-  let name,value;
-  const postUserData=(event)=>{
-    name = event.target.name;
-    value=event.target.value;
-    setUserData({...userData,[name]:value})
-  };
-  const submitData = async (event)=>{
-    event.preventDefault();
-    const {name,email,phone,subject,message}=userData;
-    if(name && email && phone && subject && message){
-    const res = fetch("https://shopify-geeks-default-rtdb.firebaseio.com/userDataRecords.json",
-    {
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        phone,
-        subject,
-        message
-      }),
-    }
-    );
-    if (res) {
-      setUserData({
-        name:"",
-        email:"",
-        phone:"",
-        subject:"",
-        message:"",
+  const userCollectionRef = collection(db, "contactdata");
+  const submitData = (e) => {
+    e.preventDefault();
+    addDoc(userCollectionRef, data)
+      .then(() => {
+        Swal.fire("Good job!", "Your data has been submitted!", "success");
+        setData({ name: "", email: "", message: "", phone: "" ,subj:""});
+      })
+      .catch((error) => {
+        alert(error?.message);
       });
-      alert("Data stored");
-    }else{
-      alert("plz fill the data")
-    }
-  }else{
-    alert("plz fill the data")
-    }
   };
   const scrolltop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
@@ -100,16 +73,17 @@ function ContactWrap() {
                 onSubmit={(e) => e.preventDefault()}
                 className="contact-form"
               >
-                <div className="row" method="POST">
+                <div className="row">
                   <div className="col-md-6">
                     <div className="form-inner">
                       <input 
                         type="text" 
                         required 
                         placeHolder="Your Name :" 
-                        name="name"
-                        value={userData.name}
-                        onChange={postUserData}/>
+                        value={data.name}
+                        onChange={(event) => {
+                          setData({ ...data, name: event.target.value });
+                        }}/>
                     </div>
                   </div>
                   <div className="col-md-6">
@@ -118,9 +92,10 @@ function ContactWrap() {
                         type="text"
                         required
                         placeHolder="Enter Your Email :"
-                        name="email"
-                        value={userData.email}
-                        onChange={postUserData}
+                        value={data.email}
+                        onChange={(event) => {
+                          setData({ ...data, email: event.target.value });
+                        }}
                       />
                     </div>
                   </div>
@@ -130,9 +105,10 @@ function ContactWrap() {
                         type="text"
                         required
                         placeHolder="Phone Number :"
-                        name="phone"
-                        value={userData.phone}
-                        onChange={postUserData}
+                        value={data.phone}
+                        onChange={(event) => {
+                          setData({ ...data, phone: event.target.value });
+                        }}
                       />
                     </div>
                   </div>
@@ -142,18 +118,20 @@ function ContactWrap() {
                         type="text" 
                         required 
                         placeHolder="Subject :" 
-                        name="subject"
-                        value={userData.subject}
-                        onChange={postUserData}/>
+                        value={data.subj}
+                        onChange={(event) => {
+                          setData({ ...data, subj: event.target.value });
+                        }}/>
                     </div>
                   </div>
                   <div className="col-md-12">
                     <div className="form-inner">
                       <textarea 
                         placeHolder="Enter Your Message"
-                        name="message"
-                        value={userData.message}
-                        onChange={postUserData}></textarea>
+                        value={data.message}
+                        onChange={(event) => {
+                        setData({ ...data, message: event.target.value });
+                      }}></textarea>
                     </div>
                   </div>
                   <div className="col-md-12">
